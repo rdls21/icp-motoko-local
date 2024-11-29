@@ -12,18 +12,15 @@ class App {
   #handleSubmit = async (e) => {
     e.preventDefault();
     const name = document.getElementById('name').value;
-    this.greeting = await perritos_backend.greet(name);
+    this.greeting = await perritos_backend.crearRegistro(name);
     this.#render();
   };
 
   #render() {
     let body = html`
       <main>
-        <img src="${logo}" alt="DFINITY logo" />
-        <br />
-        <br />
         <form action="#">
-          <label for="name">Enter your name: &nbsp;</label>
+          <label for="name">Enter the Dog Name: &nbsp;</label>
           <input id="name" alt="Name" type="text" />
           <button type="submit">Click Me!</button>
         </form>
