@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "perritos_backend": {
+      "main": "src/perritos_backend/main.mo",
+      "type": "motoko"
+    },
+    "perritos_frontend": {
+      "dependencies": [
+        "perritos_backend"
+      ],
+      "source": [
+        "src/perritos_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "perritos_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
