@@ -7,12 +7,15 @@ class App {
 
   constructor() {
     this.#render();
+    // cargar backend
   }
 
   #handleSubmit = async (e) => {
     e.preventDefault();
     const name = document.getElementById('name').value;
-    this.greeting = await perritos_backend.crearRegistro(name);
+    const breed = document.getElementById('breed').value;
+    const age = document.getElementById('age').value;
+    this.greeting = await perritos_backend.crearRegistro(name, breed, age);
     this.#render();
   };
 
